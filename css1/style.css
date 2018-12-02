@@ -1,0 +1,14 @@
+h1, h2{
+    color: deeppink;
+}
+body{
+    font-family: arial;
+    font-size: 20px;
+
+}
+.p2{
+    color: dimgray;
+}
+span{
+    font-style: italic;
+}
