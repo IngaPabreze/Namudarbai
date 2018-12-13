@@ -9,47 +9,63 @@
 <body>
     <script>
 
-var preke = {
-    title: "Nešiojamas kompiuteris",
-    description: "NVIDIA GeForce GTX 1070 grafinis adapteris su Max-Q4 technologija, Intel Core 8th Generation procesorius ir pažangi aušinimo sistema suteikia reikiamą galią, nesvarbu, kur būtumėte.",
-    discount: 30,
-    isItNew: true,
-    color:3,
-    price: 699.00,
-    currency: "EUR"
-    };
+        var preke = {
+                title: "Nešiojamas kompiuteris",
+                description: "NVIDIA GeForce GTX 1070 grafinis adapteris su Max-Q4 technologija, Intel Core 8th Generation procesorius ir pažangi aušinimo sistema suteikia reikiamą galią, nesvarbu, kur būtumėte.",
+                discount: 30,
+                isItNew: false,
+                color:1,
+                price: 699.00,
+                currency: "EUR"
+                };
+        var spalva = "";
 
-    if(preke.color == 0){
-       var spalva =  "Spalva: juoda";
-    }
+//        if(preke.color == 0){
+//           spalva =  "Spalva: juoda";
+//        }
+//
+//        else if(preke.color == 1){
+//               spalva = "Spalva: raudona";
+//        }
+//
+//        else if(preke.color == 2){
+//               spalva = "Spalva: žalia";
+//        }
+//
+//        else if(preke.color == 3){
+//           spalva = "Spalva: sidabrine";
+//        }
 
-    else if(preke.color == 1){
-           var spalva = "Spalva: raudona";
-    }
+        switch(preke.color){
+            case 0:
+                spalva =  "Spalva: juoda";
+                break;
+            case 1:
+                spalva = "Spalva: raudona";
+                break;
+            case 2:
+                spalva = "Spalva: žalia";
+                break;
+            case 3:
+                spalva = "Spalva: sidabrine";
+                break;
+        }
+        var pavadinimas = "";
+        if(preke.isItNew == true){
+            pavadinimas = '<h2 style="color:green">'+preke.title+'</h2>';
+        }
 
-    else if(preke.color == 2){
-           var spalva = "Spalva: žalia";
-    }
+        else if(preke.isItNew == false){
+            pavadinimas = '<h2 style="color:black">'+preke.title+'</h2>';
+        }
 
-    else if(preke.color == 3){
-       var spalva = "Spalva: sidabrine";
-    }
+        var aprasymas = '<p>'+preke.description+'<p>';
 
-    if(preke.isItNew == true){
-        var pavadinimas = '<h2 style="color:green">'+preke.title+'</h2>';
-    }
+        var nuolaida = '<p>'+preke.discount+'%<p>';
 
-    else if(preke.isItNew == false){
-        var pavadinimas = '<h2 style="color:black">'+preke.title+'</h2>';
-    }
+        var kaina = '<p>'+preke.price+' '+preke.currency+'<p>';
 
-    var aprasymas = '<p>'+preke.description+'<p>';
-
-    var nuolaida = '<p>'+preke.discount+'%<p>';
-
-    var kaina = '<p>'+preke.price+' '+preke.currency+'<p>';
-
-    document.write(pavadinimas+aprasymas+nuolaida+kaina+spalva);
+        document.write(pavadinimas+aprasymas+nuolaida+kaina+spalva);
 
     </script>
 </body>
