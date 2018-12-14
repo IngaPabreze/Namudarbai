@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var viesbuciai = [
+                            {
+                                "name": "Radisson",
+                                "Address": "Konstitucijos pr. 29",
+                                "Rooms":[
+                                {"Number":210, "GuestCount":2, "Price":100},
+                                {"Number":211, "GuestCount":2, "Price":110},
+                                {"Number":212, "GuestCount":2, "Price":109}]
+                            },
+                            {
+                                "name": "Vilnius Inn",
+                                "Address": "Šiaulių g. 3",
+                                "Rooms":[
+                                {"Number":11, "GuestCount":2, "Price":100},
+                                {"Number":15, "GuestCount":1, "Price":58},
+                                {"Number":22, "GuestCount":2, "Price":80},
+                                {"Number":23, "GuestCount":2, "Price":99}]
+                            }
+                        ];
+        function freePlacesInHotels(hotels){
+        document.write('<h1>Viešbučiai (su laisvais kambariais)<h1>');
+        for(i=0;i<2;i++){
+                document.write('<h2>'+hotels[i].name+'</h2>');
+                document.write('<h3>'+hotels[i].Address+'</h3>');
+                document.write('<table border="1" width=50%>');
+                document.write('<tr>');
+                document.write('<th>Kambario numeris</th>');
+                document.write('<th>Žmonių skaičius</th>');
+                document.write('<th>Kaina</th>');
+                document.write('</tr>');
+
+                for(h=0;h<viesbuciai[i].Rooms.length;h++){
+                    document.write('<tr>');
+                    document.write('<td>'+hotels[i].Rooms[h].Number+'</td>');
+                    document.write('<td>'+hotels[i].Rooms[h].GuestCount+'</td>');
+                    document.write('<td>'+hotels[i].Rooms[h].Price+'</td>');
+                    document.write('</tr>');
+                    }
+                document.write('</table>');
+                }
+            }
+        freePlacesInHotels(viesbuciai);
+    </script>
+
+</body>
+</html>
