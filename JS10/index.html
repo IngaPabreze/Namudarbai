@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var vardai = ["Jonas", "Petras", "Martynas", "Ona", "Urtė", "Ema"];
+        var ismesti = "Ema";
+        function  naujasMasyvas(masyvas1, vardasIsmetimui){
+            var i = masyvas1.indexOf(vardasIsmetimui);
+            masyvas1.splice(i, 1);
+            return masyvas1;
+            }
+        var beIsmesto = naujasMasyvas(vardai, ismesti);
+        document.write(beIsmesto);
+
+    </script>
+</body>
+</html>
