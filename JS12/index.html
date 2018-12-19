@@ -12,6 +12,7 @@
 		main{
 			background-color: blue;
             display: none;
+            height: 0px;
 		}
 	</style>
 </head>
@@ -26,13 +27,13 @@
 
 		<script>
 			$("header").click(function(){
-                $("main").css("height", "0");
-			     if($("main").css("display") == "none"){
+			     if(($("main").css("display") == "none")&&($("main").css("height") == "0px")){
                     $("main").css("display", "block");
-                    $("main").animate({height:"100vh"},1000);
+                    $("main").animate({height:"100vh"},500);
                 }
-                else{
+                 else{
                     $("main").css("display", "none");
+                    $("main").css("height", "0px");
                 }
 			})
 		</script>
