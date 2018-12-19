@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 700px;
+        }
+        [id^="theImg"]{
+            width:200px;
+            height: 120px;
+            margin: 8px;
+        }
+        .fullImg{
+            margin-top: 0px;
+			width: auto;
+            height: 100vh;
+		}
+        .modal{
+            display: none;
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.55);
+			top: 0px;
+		}
+    </style>
+</head>
+
+<body>
+    <div class="modal"></div>
+    <h1>Galerija</h1>
+    <div id="theDiv" class="container">
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var images = ["https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/bycycle.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/chess.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/jump.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/kiting.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/lion.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/onwater.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/para.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/photographer.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/pieva.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/supynes.jpg"];
+        for(i=0;i<images.length;i++){
+            $('.container').append('<img id="theImg'+[i]+'" src="'+images[i]+'" />');
+        }
+        $("[id^=theImg]").click(function(){
+            var imagePath = $(this).prop("src");
+            var image = $("<img>").attr("src", imagePath).attr("class","fullImg");
+            $(".modal").prepend(image);
+            $(".modal").fadeIn();
+        })
+        $(".modal").click(function(){
+                $(".modal").fadeOut();
+        })
+    </script>
+
+</body>
+</html>
