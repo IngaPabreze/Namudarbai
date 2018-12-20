@@ -40,7 +40,7 @@
     <script>
         var images = ["https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/bycycle.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/chess.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/jump.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/kiting.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/lion.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/onwater.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/para.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/photographer.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/pieva.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/supynes.jpg"];
         for(i=0;i<images.length;i++){
-            $('.container').append('<img id="theImg'+[i]+'" src="'+images[i]+'" />');
+            $('.container').append('<img id="theImg'+[i]+'" src="'+images[i]+'" alt="'+images[i].substring(images[i].lastIndexOf('/')+1)+'"/>');
         }
         $("[id^=theImg]").click(function(){
             var imagePath = $(this).prop("src");
@@ -51,6 +51,7 @@
         $(".modal").click(function(){
                 $(".modal").fadeOut();
         })
+
     </script>
 
 </body>
