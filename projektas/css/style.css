@@ -1,0 +1,152 @@
+        span{
+            color:white;
+        }
+
+        input{
+            height: 23px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+            font-family: newcurier;
+        }
+        .width100{
+            width:100%;
+        }
+        .center{
+            margin:auto;
+        }
+        select{
+            width: 100%;
+        }
+        textarea{
+            width:100%;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        .dinline{
+        display: inline;
+        }
+        body{
+            margin: 0;
+            font-family: newcurier;
+             color:rgba(72, 112, 110, 1);
+            background-color: lightgray;
+        }
+        header{
+            margin: 0;
+            border: 10px double darkgrey;
+            background-color: rgba(12, 167, 149, 0.35);
+            color: rgba(72, 112, 110, 1);
+            text-shadow: 1px 1px teal;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            font-family: newcurier;
+            padding-left: 100px;
+            padding-right: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 26px;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 0;
+            background-image:
+              linear-gradient(45deg, #ccc 25%, transparent 25%),
+              linear-gradient(135deg, #ccc 25%, transparent 25%),
+              linear-gradient(45deg, transparent 75%, #ccc 75%),
+              linear-gradient(135deg, transparent 75%, #ccc 75%);
+            background-size:25px 25px; /* Must be a square */
+            background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; /* Must be half of one side of the square */
+        }
+        @font-face {
+            font-family: newcurier;
+            src:url(../CourierNewBold.ttf);
+        }
+/*        aside{*/
+/*            background-color: blue;*/
+/*        }*/
+
+         footer{
+             background-color: rgba(12, 167, 149, 0.35);
+             margin: 0px;
+             border: 10px double darkgrey;
+        }
+        .thumbnail{
+            margin-bottom: 5px;
+              }
+        img{
+            width: 30%;
+            max-width: 200px;
+            margin: 15px;
+            margin-top: 0;
+            margin-left: 0;
+            margin-bottom: 5px;
+        }
+        .firstImg{
+            width: 20%;
+            max-width: 200px;
+            margin: 15px;
+            margin-top: 0;
+            margin-left: 0;
+            margin-bottom: 5px;
+        }
+        .articlePhoto{
+        width: 50%;
+        max-width: 300px;
+        margin: 15px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 5px;
+        }
+        .box{
+            background-color: lightgray;
+            text-align: justify;
+            padding: 30px;
+            margin: 14px;
+            border-top-right-radius: 50px;
+            box-shadow: 5px 15px 18px;
+        }
+        .mapbox{
+            padding: 20px;
+        }
+        .mapbox iframe{
+			width: 100%;
+		}
+        .h1{
+            margin: auto;
+        }
+        .artitle{
+            text-align: left;
+            font-size: 25px;
+            padding: 10px;
+        }
+        button{
+            background-color: rgba(23, 155, 140, 0.41);
+            color: teal;
+            margin: 0px;
+            padding: 2px;
+        }
+
+        .button{
+            background-color: lightgrey;
+            color: darkslategray;
+            margin: 10px;
+            padding: 2px;
+        }
+        section{
+            background-color: teal;
+            margin: 0px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border: 10px double darkgrey;
+        }
+        adress{
+            display:block;
+            font-size: 18px;
+            margin: 20px;
+            padding: 25px;
+            align-content: center;
+            background-color: lightgray;
+            box-shadow: 5px 10px 100px;
+            text-shadow: 0.7px 0.7px teal;
+        }
