@@ -1,5 +1,5 @@
         span{
-            color:white;
+            color:darkgrey;
         }
 
         input{
@@ -7,10 +7,9 @@
             margin-top: 7px;
             margin-bottom: 7px;
             font-family: newcurier;
+
         }
-        .width100{
-            width:100%;
-        }
+
         .center{
             margin:auto;
         }
@@ -132,6 +131,12 @@
             color: darkslategray;
             margin: 10px;
             padding: 2px;
+        }
+         .width100{
+            width:100%;
+            margin-left: 0px;
+             margin-right: 0px;
+
         }
         section{
             background-color: teal;
