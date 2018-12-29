@@ -70,9 +70,10 @@
             $(articleBox).append('<h1 class="artitle">Calvin Harris</h1>');
             $(articleBox).append('<img class="firstImg" src="images/calvinharris.jpg" style="float: left">');
             $(articleBox).append('<p>Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris, is a Scottish DJ, record producer, singer, and songwriter. His debut studio album I Created Disco was released in June 2007; it spawned two UK top 10 singles, "Acceptable in the 80s" and "The Girls". In 2009, Harris released his second studio album, Ready for the Weekend, which debuted at number one on the UK Albums Chart and was later certified gold by the BPI. Its lead single, "I&quotm Not Alone", became his first song to top the UK Singles Chart.</p><p  class="dinline">Born in Dumfries, Scotland, Harris rose to international prominence with the release of his third studio album, 18 Months, in October 2012. Topping the UK charts, the album became his first to chart on the Billboard 200 chart in the United States, peaking at number 19. All eight of the album&quots singles, including "Feel So Close", "Sweet Nothing" and "I Need Your Love", reached the top 10 in the UK. At the time, Harris broke the record for the most top 10 songs from one studio album on the UK Singles Chart with eight entries, surpassing Michael Jackson. Harris released his fourth studio album, Motion, in November 2014. It debuted at number two in the United Kingdom and at number five in the United States and became Harris&quots second consecutive number one album on the US Dance/Electronic Albums chart.</p>');
-            var readMore = $('<button id="button1">Read more</button>');
+            var i = 1;
+            var readMore = $('<button id="button'+i+'">Read more</button>');
             $(articleBox).append(readMore);
-            $('#button1').click(function() {
+            $('#button'+i+'').click(function(){
                 window.location.href = 'calvinharris.html';
                 });
 
@@ -85,9 +86,10 @@
             $(articleBox).append('<h1 class="artitle">Bastille</h1>');
             $(articleBox).append('<img class="notFirstImg" src="images/bastille.jpg" style="float: left">');
             $(articleBox).append('<p class="dinline">Bastille (stylised as BΔSTILLE) are a British band formed in 2010. The group began as a solo project by lead vocalist Dan Smith, but later expanded to include keyboardist Kyle Simmons, bassist and guitarist Will Farquarson and drummer Chris Wood. The name of the band derives from Bastille Day, which is celebrated on 14 July, the date of Smith&quotss birthday. After an independently released debut single and a self-released EP, the band signed to Virgin Records. Their first studio album, Bad Blood, was released in March 2013 and entered the UK Albums Chart at number one and included the hit single "Pompeii". </p>');
-            var readMore = $('<button id="button2">Read more</button>');
+            var i = 2;
+            var readMore = $('<button id="button'+i+'">Read more</button>');
             $(articleBox).append(readMore);
-            $('#button2').click(function() {
+            $('#button'+i+'').click(function(){
                 window.location.href = 'bastille.html';
                 });
 
@@ -100,9 +102,10 @@
             $(articleBox).append('<h1 class="artitle">Julia Michaels</h1>');
             $(articleBox).append('<img class="notFirstImg" src="images/julia.jpg" style="float: left">');
             $(articleBox).append('<p class="dinline">Julia Carin Cavazos (born November 13, 1993),known by her stage name Julia Michaels, is an American singer and songwriter from Davenport, Iowa. Michaels released her debut solo single with Republic Records in 2017, "Issues", which peaked at number 11 on the Billboard Hot 100 in the United States, was certified triple-platinum by the Recording Industry Association of America (RIAA), and garnered her Grammy Award nominations for Song of the Year and Best New Artist. </p>');
-            var readMore = $('<button id="button3">Read more</button>');
+            var i = 3;
+            var readMore = $('<button id="button'+i+'">Read more</button>');
             $(articleBox).append(readMore);
-            $('#button3').click(function() {
+            $('#button'+i+'').click(function(){
                 window.location.href = 'julia.html';
                 });
 

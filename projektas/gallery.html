@@ -64,6 +64,16 @@
         for(i=0;i<images.length;i++){
             $(containerDiv).append('<img id="theImg'+[i]+'" src="'+images[i]+'" alt="'+images[i].substring(images[i].lastIndexOf('/')+1)+'"/>');
         }
+//         $("[id^=theImg]").click(function(){
+//            var imagePath = $(this).prop("src");
+//            var image = $("<img>").attr("src", imagePath).attr("class","fullImg");
+//            $(".modal").prepend(image);
+//            $(".modal").fadeIn();
+//        })
+//        $(".modal").click(function(){
+//                $(".modal").fadeOut();
+//        })
+
 
 
         var images = ["https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/bycycle.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/chess.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/jump.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/kiting.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/lion.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/onwater.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/para.jpg", "https://raw.githubusercontent.com/zigmantasvcs/resources/master/images/offers/photographer.jpg"];
@@ -84,8 +94,12 @@
             $(".modal").fadeIn();
         })
         $(".modal").click(function(){
-                $(".modal").fadeOut();
+                $(".modal").fadeOut(function(){
+				$(".modal").empty();
+				});
         })
+
+
 
     </script>
 </body>
