@@ -94,23 +94,23 @@
                     }]
 
             function drawArticle(articleData){
-            var rowDiv = $("<div>").addClass("row");
+                var rowDiv = $("<div>").addClass("row");
 
-            var article = $("<article>").addClass("scol12").addClass(articleData.mColClass);
+                var article = $("<article>").addClass("scol12").addClass(articleData.mColClass);
 
-            var articleBox = $("<div>").addClass("box");
+                var articleBox = $("<div>").addClass("box");
 
-            var nr = articleData.articleNr;
+                var nr = articleData.articleNr;
 
-            var fullArticle = $(article).append($(articleBox).append('<h1 class="artitle">'+articleData.title+'</h1>').append('<img class="firstImg" src="'+articleData.url+'" style="float: left">').append('<p>'+articleData.firstParagraph+'</p><p>'+articleData.secondParagraph+'</p>').append($('<button id="button'+nr+'">Read more</button>')));
-            $(".rowDiv").append(fullArticle);
-            $('#button'+nr+'').click(function(){
-            window.location.href = articleData.buttonUrl;
-            });
+                var fullArticle = $(article).append($(articleBox).append('<h1 class="artitle">'+articleData.title+'</h1>').append('<img class="firstImg" src="'+articleData.url+'" style="float: left">').append('<p>'+articleData.firstParagraph+'</p><p>'+articleData.secondParagraph+'</p>').append($('<button id="button'+nr+'">Read more</button>')));
+                $(".rowDiv").append(fullArticle);
+                $('#button'+nr+'').click(function(){
+                window.location.href = articleData.buttonUrl;
+                });
 
             }
             for (i=0; i<articleData.length; i++){
-            drawArticle(articleData[i]);
+                drawArticle(articleData[i]);
             }
     </script>
 </body>
