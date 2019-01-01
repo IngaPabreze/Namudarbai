@@ -86,7 +86,7 @@
         }
         @font-face {
             font-family: newcurier;
-            src:url(../CourierNewBold.ttf);
+            src:url(couriernewbold.ttf);
         }
          footer{
              background-color: rgba(12, 167, 149, 0.35);
