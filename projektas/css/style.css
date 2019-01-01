@@ -1,3 +1,4 @@
+
         .container{
             display: flex;
             flex-wrap: wrap;
@@ -46,9 +47,11 @@
             margin-bottom: 7px;
         }
 
+/*
         .dinline{
         display: inline;
-        }
+*/
+/*        }*/
         body{
             margin: 0;
             font-family: newcurier;
@@ -142,8 +145,10 @@
         button{
             background-color: rgba(23, 155, 140, 0.41);
             color: teal;
-            margin: 0px;
-            padding: 2px;
+            text-decoration:overline;
+            height: 50px;
+            width: 100px;
+            padding: 15px;
         }
 
         .button{

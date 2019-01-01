@@ -64,17 +64,17 @@
         for(i=0;i<images.length;i++){
             $(containerDiv).append('<img id="theImg'+[i]+'" src="'+images[i]+'" alt="'+images[i].substring(images[i].lastIndexOf('/')+1)+'"/>');
         }
-//         $("[id^=theImg]").click(function(){
-//            var imagePath = $(this).prop("src");
-//            var image = $("<img>").attr("src", imagePath).attr("class","fullImg");
-//            $(".modal").prepend(image);
-//            $(".modal").fadeIn();
-//        })
-//        $(".modal").click(function(){
-//                $(".modal").fadeOut();
-//        })
 
 
+        var images = ["https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image1.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image2.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image3.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image4.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image5.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image6.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image7.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image8.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image9.jpg"];
+        var boxDiv = $("<div>").addClass("box");
+        $("section").append(boxDiv);
+        $(boxDiv).append('<h1 class="artitle">Bastille</h1>');
+        var containerDiv = $("<div>").addClass("container");
+        $(boxDiv).append(containerDiv);
+        for(i=0;i<images.length;i++){
+            $(containerDiv).append('<img id="theImg'+[i]+'" src="'+images[i]+'" alt="'+images[i].substring(images[i].lastIndexOf('/')+1)+'"/>');
+        }
 
         var images = ["https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image1.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image2.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image3.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image4.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image5.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image6.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image7.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image8.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image9.jpg"];
         var boxDiv = $("<div>").addClass("box");
