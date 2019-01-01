@@ -1,4 +1,7 @@
-
+        .flex{
+            display: flex;
+            justify-content: flex-end;
+        }
         .container{
             display: flex;
             flex-wrap: wrap;
@@ -54,7 +57,7 @@
 /*        }*/
         body{
             margin: 0;
-            font-family: newcurier;
+            font-family: monterey;
              color:rgba(72, 112, 110, 1);
             background-color: lightgray;
         }
@@ -64,14 +67,14 @@
             background-color: rgba(12, 167, 149, 0.35);
             color: rgba(72, 112, 110, 1);
             text-shadow: 1px 1px teal;
-            padding-top: 60px;
-            padding-bottom: 60px;
-            font-family: newcurier;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            font-family: monterey;
             padding-left: 100px;
             padding-right: 100px;
             display: flex;
             flex-wrap: wrap;
-            font-size: 26px;
+            font-size: 35px;
             justify-content: center;
             text-align: center;
             margin-bottom: 0;
@@ -85,8 +88,12 @@
             background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; /* Must be half of one side of the square */
         }
         @font-face {
-            font-family: newcurier;
-            src:url(couriernewbold.ttf);
+            font-family: monterey;
+            src:url(monterey.ttf);
+        }
+        @font-face {
+            font-family: abril;
+            src:url(abril.otf);
         }
          footer{
              background-color: rgba(12, 167, 149, 0.35);
@@ -96,21 +103,17 @@
         .thumbnail{
             margin-bottom: 5px;
               }
-        .notFirstImg{
-            width: 30%;
+        .firstImg{
+            width: 25%;
             max-width: 200px;
             margin: 15px;
             margin-top: 0;
             margin-left: 0;
             margin-bottom: 5px;
         }
-        .firstImg{
-            width: 20%;
-            max-width: 200px;
-            margin: 15px;
-            margin-top: 0;
-            margin-left: 0;
-            margin-bottom: 5px;
+        article{
+             font-family: abril;
+            font-weight:inherit;
         }
         .articlePhoto{
         width: 50%;
@@ -145,10 +148,13 @@
         button{
             background-color: rgba(23, 155, 140, 0.41);
             color: teal;
+            font-family: newcurier;
+            font-weight: bold;
             text-decoration:overline;
             height: 50px;
             width: 100px;
             padding: 15px;
+/*             border-radius: 25px 25px 25px 25px;*/
         }
 
         .button{
@@ -169,6 +175,7 @@
             margin-top: 0;
             margin-bottom: 10px;
             border: 10px double darkgrey;
+            font:
         }
         adress{
             display:block;

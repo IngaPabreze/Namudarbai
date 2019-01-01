@@ -49,11 +49,10 @@
    <script>
            var articleData = [{
                     "articleNr":1,
-                    "mColClass":"mcol12",
+                    "mColClass":"mcol6",
                     "title":"Calvin Carris",
                     "url":"images/calvinharris.jpg",
                     "firstParagraph":"Adam Richard Wiles (born 17 January 1984), known professionally as Calvin Harris, is a Scottish DJ, record producer, singer, and songwriter. His debut studio album I Created Disco was released in June 2007; it spawned two UK top 10 singles, &quotAcceptable in the 80s&quot and &quotThe Girls&quot. In 2009, Harris released his second studio album, Ready for the Weekend, which debuted at number one on the UK Albums Chart and was later certified gold by the BPI. Its lead single, &quotI'm Not Alone&quot, became his first song to top the UK &quotSingles Chart.",
-                    "secondParagraph":"Born in Dumfries, Scotland, Harris rose to international prominence with the release of his third studio album, 18 Months, in October 2012. Topping the UK charts, the album became his first to chart on the Billboard 200 chart in the United States, peaking at number 19. All eight of the album&quots singles, including &quotFeel So Close&quot, &quotSweet Nothing&quot and &quotI Need Your Love&quot, reached the top 10 in the UK. At the time, Harris broke the record for the most top 10 songs from one studio album on the UK Singles Chart with eight entries, surpassing Michael Jackson. Harris released his fourth studio album, Motion, in November 2014. It debuted at number two in the United Kingdom and at number five in the United States and became Harris&quots second consecutive number one album on the US Dance/Electronic Albums chart.",
                     "buttonUrl":"calvinharris.html"
                     },
                     {
@@ -62,7 +61,6 @@
                     "title":"Bastille",
                     "url":"images/bastille.jpg",
                     "firstParagraph":"Bastille (stylised as BΔSTILLE) are a British band formed in 2010. The group began as a solo project by lead vocalist Dan Smith, but later expanded to include keyboardist Kyle Simmons, bassist and guitarist Will Farquarson and drummer Chris Wood. The name of the band derives from Bastille Day, which is celebrated on 14 July, the date of Smith&quotss birthday. After an independently released debut single and a self-released EP, the band signed to Virgin Records. Their first studio album, Bad Blood, was released in March 2013 and entered the UK Albums Chart at number one and included the hit single &quotPompeii&quot. ",
-                    "secondParagraph":"",
                     "buttonUrl":"bastille.html"
                     },
                     {
@@ -71,7 +69,6 @@
                     "title":"Julia Michaels",
                     "url":"images/julia.jpg",
                     "firstParagraph":"Julia Carin Cavazos (born November 13, 1993),known by her stage name Julia Michaels, is an American singer and songwriter from Davenport, Iowa. Michaels released her debut solo single with Republic Records in 2017, &quotIssues&quot, which peaked at number 11 on the Billboard Hot 100 in the United States, was certified triple-platinum by the Recording Industry Association of America (RIAA), and garnered her Grammy Award nominations for Song of the Year and Best New Artist. ",
-                    "secondParagraph":"",
                     "buttonUrl":"julia.html"
                     },
                     {
@@ -80,7 +77,6 @@
                     "title":"Benjamin clementine",
                     "url":"images/benjamin.jpg",
                     "firstParagraph":"Benjamin Sainte-Clémentine (/klɛməntaɪn/; born 7 December 1988)is an English artist, poet, vocalist, composer, and musician. Born and raised in London, England, Clementine later moved to Paris, France becoming homeless as a teenager. There, his performances helped him to become a cult figure in the music and art scene. Moving back to London, he made his TV debut on the BBC programme Later With Jools Holland in 2013. A number of critics described him as becoming one of the great singer-songwriters of his generation and the future sound of London, whilst struggling to place his music in any one genre.",
-                    "secondParagraph":"",
                     "buttonUrl":"benjamin.html"
                     },
                     {
@@ -89,7 +85,6 @@
                     "title":"Chet Faker",
                     "url":"images/faker.jpg",
                     "firstParagraph":"Nicholas James Murphy (born 23 June 1988), known by his stage name Chet Faker, is an Australian singer and songwriter. In 2012, he issued an extended play, Thinking in Textures, and signed to Downtown Records in the United States. In October 2012, he won Breakthrough Artist of the Year and Thinking in Textures won Best Independent Single/EP at the Australian Independent Records Awards. In January 2013, the work won Best Independent Release at the Rolling Stone Australia Awards for 2012. ",
-                    "secondParagraph":"",
                     "buttonUrl":"faker.html"
                     }]
 
@@ -102,7 +97,7 @@
 
                 var nr = articleData.articleNr;
 
-                var fullArticle = $(article).append($(articleBox).append('<h1 class="artitle">'+articleData.title+'</h1>').append('<img class="firstImg" src="'+articleData.url+'" style="float: left">').append('<p>'+articleData.firstParagraph+'</p><p>'+articleData.secondParagraph+'</p>').append($('<button id="button'+nr+'">Read more</button>')));
+                var fullArticle = $(article).append($(articleBox).append('<h1 class="artitle">'+articleData.title+'</h1>').append('<img class="firstImg" src="'+articleData.url+'" style="float: left">').append('<p>'+articleData.firstParagraph+'</p>').append($('<div class="flex"><button id="button'+nr+'">Read more</button><button>Video</button></div>')));
                 $(".rowDiv").append(fullArticle);
                 $('#button'+nr+'').click(function(){
                 window.location.href = articleData.buttonUrl;
