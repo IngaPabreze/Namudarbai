@@ -55,36 +55,27 @@
     </div>
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
     <script>
-        var images = ["https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image1.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image2.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image3.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image4.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image5.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image6.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image7.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image8.jpg"];
-        function dataGallery(images){
-        var boxDiv = $("<div>").addClass("box");
-        var containerDiv = $("<div>").addClass("container");
-        for(i=0;i<images.length;i++){
-            $(containerDiv).append('<img id="theImg'+[i]+'" src="'+images[i]+'" alt="'+images[i].substring(images[i].lastIndexOf('/')+1)+'"/>');
-        }
-        return $(boxDiv).append('<h1 class="artitle">Calvin Harris</h1>').append(containerDiv);
-        }
-         $("section").append(dataGallery(images));
 
-        var images = ["https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image1.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image2.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image3.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image4.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image5.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image6.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image7.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image8.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image9.jpg"];
-        var boxDiv = $("<div>").addClass("box");
-        $("section").append(boxDiv);
-        $(boxDiv).append('<h1 class="artitle">Bastille</h1>');
-        var containerDiv = $("<div>").addClass("container");
-        $(boxDiv).append(containerDiv);
-        for(i=0;i<images.length;i++){
-            $(containerDiv).append('<img id="theImg'+[i]+'" src="'+images[i]+'" alt="'+images[i].substring(images[i].lastIndexOf('/')+1)+'"/>');
-        }
+          var galleryData = [{
+            "title":"Calvin Harris",
+            "images" : ["https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image1.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image2.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image3.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image4.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image5.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image6.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image7.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/calvin/image8.jpg"]
+            },
+            {
+            "title":"Bastille",
+            "images" : ["https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image1.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image2.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image3.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image4.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image5.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image6.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image7.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image8.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image9.jpg"]
+          }]
 
-        var images = ["https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image1.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image2.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image3.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image4.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image5.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image6.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image7.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image8.jpg", "https://raw.githubusercontent.com/IngaPabreze/gallery/bastille/image9.jpg"];
+        function dataGallery(galleryData){
         var boxDiv = $("<div>").addClass("box");
-        $("section").append(boxDiv);
-        $(boxDiv).append('<h1 class="artitle">Bastille</h1>');
         var containerDiv = $("<div>").addClass("container");
-        $(boxDiv).append(containerDiv);
-        for(i=0;i<images.length;i++){
-            $(containerDiv).append('<img id="theImg'+[i]+'" src="'+images[i]+'" alt="'+images[i].substring(images[i].lastIndexOf('/')+1)+'"/>');
+        for(i=0;i<galleryData.images.length;i++){
+            $(containerDiv).append('<img id="theImg'+[i]+'" src="'+galleryData.images[i]+'" alt="'+galleryData.images[i].substring(galleryData.images[i].lastIndexOf('/')+1)+'"/>');
         }
+        return $(boxDiv).append('<h1 class="artitle">'+galleryData.title+'</h1>').append(containerDiv);
+        }
+        for (h=0; h<galleryData.length; h++){
+            $("section").append(dataGallery(galleryData[h]));
+            }
 
 
         $("[id^=theImg]").click(function(){
